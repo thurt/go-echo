@@ -1,0 +1,11 @@
+// simple-chat.proto
+syntax = "proto3";
+package echo;
+
+message Msg {
+	string text = 1;
+}
+
+service Echo {
+	rpc send(Msg) returns (Msg) {}
+}
